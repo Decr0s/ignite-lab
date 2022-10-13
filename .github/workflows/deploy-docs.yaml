@@ -18,10 +18,10 @@ jobs:
         with:
           node-version: 16
 
-      - name: Deploy Storybook
-        run: npm ci
+      - name: Install dependencies
+        run: npm ci --legacy-peen-deps
 
-      - name: Deploy Storybook
+      - name: Build Storybook
         run: npm run build-storybook
 
       - name: Deploy Storybook
